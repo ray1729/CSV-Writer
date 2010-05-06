@@ -1,0 +1,7 @@
+A handy wrapper around the Text::CSV_XS Perl module for writing CSV
+data, taking away some of the boilerplate code for simple usage.
+
+To write to CSV data to STDOUT:
+
+my $csv = CSV::Writer->new;
+$csv->write( 'foo', 'bar', 'baz' );
