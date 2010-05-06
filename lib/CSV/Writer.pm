@@ -30,10 +30,9 @@ has columns => (
     traits  => [ 'Array' ],
     handles => {
         columns     => 'elements',
-        has_columns => 'count',
-            
+        has_columns => 'count'            
     },
-    default => sub { [] },        
+    default => sub { [] }    
 );
 
 sub _build_csv {
@@ -97,6 +96,11 @@ The filename or L<IO::Handle> object that output will be written to.
 =item csv_opts
 
 A hash reference of options for the L<Text::CSV_XS> constructor.
+
+=item columns
+
+Reference to a list of columns specifying the hash slice to write when
+passed a hash.
 
 =back
 
