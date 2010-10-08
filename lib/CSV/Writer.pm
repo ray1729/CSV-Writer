@@ -28,6 +28,7 @@ has csv => (
 
 has columns => (
     traits  => [ 'Array' ],
+    writer  => 'set_columns',
     handles => {
         columns     => 'elements',
         has_columns => 'count'            
